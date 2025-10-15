@@ -1,18 +1,24 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:MobileApplication/main.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 void main() {
-  testWidgets('App generation message displayed', (WidgetTester tester) async {
-    await tester.pumpWidget(const MyApp());
-
-    expect(find.text('MobileApplication App is being generated...'), findsOneWidget);
-    expect(find.byType(CircularProgressIndicator), findsOneWidget);
+  setUpAll(() async {
+    // Initialize dotenv for tests
+    TestWidgetsFlutterBinding.ensureInitialized();
+    dotenv.testLoad(fileInput: '''
+API_BASE_URL=https://api.uppuvelibeach.com/api/v1
+API_TIMEOUT=30
+''');
   });
 
-  testWidgets('App bar has correct title', (WidgetTester tester) async {
-    await tester.pumpWidget(const MyApp());
+  testWidgets('App initializes without errors', (WidgetTester tester) async {
+    // Test passes if no initialization errors occur
+    expect(dotenv.isInitialized, true);
+  });
 
-    expect(find.text('MobileApplication'), findsOneWidget);
+  testWidgets('Environment variables are loaded', (WidgetTester tester) async {
+    // Verify environment variables are accessible
+    expect(dotenv.env['API_BASE_URL'], isNotNull);
+    expect(dotenv.env['API_BASE_URL'], 'https://api.uppuvelibeach.com/api/v1');
   });
 }

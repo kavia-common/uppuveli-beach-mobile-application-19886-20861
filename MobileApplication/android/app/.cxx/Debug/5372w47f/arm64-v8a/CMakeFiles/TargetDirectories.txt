@@ -1,0 +1,2 @@
+/home/kavia/workspace/code-generation/uppuveli-beach-mobile-application-19886-20861/MobileApplication/android/app/.cxx/Debug/5372w47f/arm64-v8a/CMakeFiles/edit_cache.dir
+/home/kavia/workspace/code-generation/uppuveli-beach-mobile-application-19886-20861/MobileApplication/android/app/.cxx/Debug/5372w47f/arm64-v8a/CMakeFiles/rebuild_cache.dir
