@@ -1,6 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:MobileApplication/state/auth_state.dart';
 import '../helpers/test_helpers.dart';
+import '../helpers/test_secure_storage_mock.dart';
 
 void main() {
   late AuthState authState;
@@ -10,7 +11,14 @@ void main() {
   });
 
   setUp(() {
+    // Clear mock storage before each test
+    getMockSecureStoragePlatform().clear();
     authState = AuthState();
+  });
+
+  tearDown(() {
+    // Clean up after each test
+    getMockSecureStoragePlatform().clear();
   });
 
   group('AuthState Tests', () {
