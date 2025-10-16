@@ -6,6 +6,10 @@ analyzer
 3.5
 file:///home/kavia/.pub-cache/hosted/pub.dev/analyzer-7.7.1/
 file:///home/kavia/.pub-cache/hosted/pub.dev/analyzer-7.7.1/lib/
+archive
+3.0
+file:///home/kavia/.pub-cache/hosted/pub.dev/archive-4.0.7/
+file:///home/kavia/.pub-cache/hosted/pub.dev/archive-4.0.7/lib/
 args
 3.3
 file:///home/kavia/.pub-cache/hosted/pub.dev/args-2.7.0/
@@ -58,6 +62,10 @@ checked_yaml
 2.19
 file:///home/kavia/.pub-cache/hosted/pub.dev/checked_yaml-2.0.3/
 file:///home/kavia/.pub-cache/hosted/pub.dev/checked_yaml-2.0.3/lib/
+cli_util
+3.4
+file:///home/kavia/.pub-cache/hosted/pub.dev/cli_util-0.4.2/
+file:///home/kavia/.pub-cache/hosted/pub.dev/cli_util-0.4.2/lib/
 clock
 3.4
 file:///home/kavia/.pub-cache/hosted/pub.dev/clock-1.1.2/
@@ -114,6 +122,10 @@ flutter_dotenv
 2.12
 file:///home/kavia/.pub-cache/hosted/pub.dev/flutter_dotenv-5.2.1/
 file:///home/kavia/.pub-cache/hosted/pub.dev/flutter_dotenv-5.2.1/lib/
+flutter_launcher_icons
+2.18
+file:///home/kavia/.pub-cache/hosted/pub.dev/flutter_launcher_icons-0.13.1/
+file:///home/kavia/.pub-cache/hosted/pub.dev/flutter_launcher_icons-0.13.1/lib/
 flutter_lints
 3.5
 file:///home/kavia/.pub-cache/hosted/pub.dev/flutter_lints-5.0.0/
@@ -174,6 +186,10 @@ http_parser
 3.4
 file:///home/kavia/.pub-cache/hosted/pub.dev/http_parser-4.1.2/
 file:///home/kavia/.pub-cache/hosted/pub.dev/http_parser-4.1.2/lib/
+image
+3.0
+file:///home/kavia/.pub-cache/hosted/pub.dev/image-4.5.4/
+file:///home/kavia/.pub-cache/hosted/pub.dev/image-4.5.4/lib/
 intl
 3.0
 file:///home/kavia/.pub-cache/hosted/pub.dev/intl-0.19.0/
@@ -274,6 +290,10 @@ path_provider_windows
 3.2
 file:///home/kavia/.pub-cache/hosted/pub.dev/path_provider_windows-2.3.0/
 file:///home/kavia/.pub-cache/hosted/pub.dev/path_provider_windows-2.3.0/lib/
+petitparser
+3.5
+file:///home/kavia/.pub-cache/hosted/pub.dev/petitparser-6.1.0/
+file:///home/kavia/.pub-cache/hosted/pub.dev/petitparser-6.1.0/lib/
 platform
 3.2
 file:///home/kavia/.pub-cache/hosted/pub.dev/platform-3.1.6/
@@ -286,6 +306,10 @@ pool
 3.4
 file:///home/kavia/.pub-cache/hosted/pub.dev/pool-1.5.2/
 file:///home/kavia/.pub-cache/hosted/pub.dev/pool-1.5.2/lib/
+posix
+3.0
+file:///home/kavia/.pub-cache/hosted/pub.dev/posix-6.0.3/
+file:///home/kavia/.pub-cache/hosted/pub.dev/posix-6.0.3/lib/
 provider
 2.12
 file:///home/kavia/.pub-cache/hosted/pub.dev/provider-6.1.5+1/
@@ -434,6 +458,10 @@ xdg_directories
 3.3
 file:///home/kavia/.pub-cache/hosted/pub.dev/xdg_directories-1.1.0/
 file:///home/kavia/.pub-cache/hosted/pub.dev/xdg_directories-1.1.0/lib/
+xml
+3.2
+file:///home/kavia/.pub-cache/hosted/pub.dev/xml-6.5.0/
+file:///home/kavia/.pub-cache/hosted/pub.dev/xml-6.5.0/lib/
 yaml
 3.4
 file:///home/kavia/.pub-cache/hosted/pub.dev/yaml-3.1.3/

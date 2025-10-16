@@ -44,6 +44,7 @@ dev_dependencies:
   json_serializable: ^6.7.1
   mocktail: ^1.0.0
   http_mock_adapter: ^0.6.1
+  flutter_launcher_icons: ^0.13.1
 
 flutter:
   uses-material-design: true
@@ -51,3 +52,11 @@ flutter:
   assets:
     - .env
     - assets/
+
+flutter_icons:
+  android: true
+  ios: false
+  image_path: "icon.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "icon.png"

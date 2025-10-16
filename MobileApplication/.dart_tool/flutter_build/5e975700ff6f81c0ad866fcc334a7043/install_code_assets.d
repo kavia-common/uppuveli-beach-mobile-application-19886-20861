@@ -1,0 +1,1 @@
+ /home/kavia/workspace/code-generation/uppuveli-beach-mobile-application-19886-20861/MobileApplication/.dart_tool/flutter_build/5e975700ff6f81c0ad866fcc334a7043/native_assets.json: 

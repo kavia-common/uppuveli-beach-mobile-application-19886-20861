@@ -31,6 +31,10 @@ void main() {
     ApiClient.instance = dio;
   });
 
+  tearDown(() {
+    ApiClient.reset();
+  });
+
   group('RoomsListScreen Widget Tests', () {
     testWidgets('RoomsListScreen renders app bar', (WidgetTester tester) async {
       // Arrange - Mock the API to return empty list
@@ -46,6 +50,9 @@ void main() {
           authState: mockAuthState,
         ),
       );
+
+      // Wait for async operations to complete
+      await tester.pumpAndSettle();
 
       // Assert
       expect(find.text('Available Rooms'), findsOneWidget);
@@ -68,6 +75,9 @@ void main() {
 
       // Assert - Initial loading state
       expect(find.byType(CircularProgressIndicator), findsOneWidget);
+      
+      // Clean up - let async operations complete
+      await tester.pumpAndSettle(const Duration(seconds: 5));
     });
 
     testWidgets('RoomsListScreen displays rooms after successful load', (WidgetTester tester) async {

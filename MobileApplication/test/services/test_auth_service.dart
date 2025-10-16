@@ -1,14 +1,11 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:dio/dio.dart';
-import 'package:MobileApplication/services/auth_service.dart';
-import 'package:MobileApplication/models/user.dart';
 import '../helpers/test_helpers.dart';
 
 class MockDio extends Mock implements Dio {}
 
 void main() {
-  late AuthService authService;
   late MockDio mockDio;
 
   setUpAll(() async {
@@ -17,7 +14,6 @@ void main() {
 
   setUp(() {
     mockDio = MockDio();
-    authService = AuthService();
   });
 
   group('AuthService Tests', () {

@@ -1,0 +1,28 @@
+{
+  "buildFiles": [
+    "/opt/flutter/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/opt/android-sdk-linux/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/home/kavia/workspace/code-generation/uppuveli-beach-mobile-application-19886-20861/MobileApplication/android/app/.cxx/RelWithDebInfo/25t61l63/x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/opt/android-sdk-linux/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/home/kavia/workspace/code-generation/uppuveli-beach-mobile-application-19886-20861/MobileApplication/android/app/.cxx/RelWithDebInfo/25t61l63/x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {},
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "/opt/android-sdk-linux/ndk/26.3.11579264/toolchains/llvm/prebuilt/linux-x86_64/bin/clang.lld",
+      "cppCompilerExecutable": "/opt/android-sdk-linux/ndk/26.3.11579264/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++.lld"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": []
+}
