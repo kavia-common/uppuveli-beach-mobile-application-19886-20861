@@ -18,6 +18,11 @@ Minimal functional React admin panel for managing bookings, loyalty, boutique, n
 
 CORS: the backend must allow http://localhost:3000 origin.
 
+Health check:
+- Verify BackendAPI is running: curl http://localhost:3001/
+- Expected: {"message":"Healthy"}
+- All API requests are sent to ${REACT_APP_API_BASE_URL} which must include the /api/v1 prefix.
+
 ## Authentication
 
 - Login path: /login
