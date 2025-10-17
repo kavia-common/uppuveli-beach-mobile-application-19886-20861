@@ -25,16 +25,19 @@ CORS: the backend must allow http://localhost:3000 origin.
 - Expected response either:
   - { token: "JWT..." } OR { status: "success", data: { token: "JWT..." } }
 - The token is stored in localStorage as "authToken".
-- API client attaches "Authorization: Bearer <token>" header.
+- API client attaches "Authorization: Bearer <token)" header.
 - On 401, client clears token and redirects to /login preserving the original path via next param.
 
-## Routes
+## Protected Routes
 
-- /bookings (protected): List, create, update, delete bookings
-- /loyalty (protected): List accounts and update points/tier
-- /boutique (protected): List, create, update, delete items
-- /notifications (protected): Send a notification
-- /chat (protected): List messages and send new message
+The following routes require authentication and will redirect to /login if there is no token:
+- /bookings: List, create, update, delete bookings
+- /loyalty: List accounts and update points/tier
+- /boutique: List, create, update, delete items
+- /notifications: Send a notification
+- /chat: List messages and send new message
+
+Public route:
 - /login: Admin login
 
 ## Files
@@ -66,3 +69,4 @@ Responses may be raw arrays/objects or wrapped under {data: ...}. The UI handles
 - Minimal UI (no UI framework); basic forms and tables only
 - Ensure CORS is configured on backend for http://localhost:3000
 - To change API URL, update .env and restart dev server
+- The router is bootstrapped in src/App.js with react-router-dom v6 and BrowserRouter. ProtectedRoute enforces token presence and redirects with a next param for post-login return.
