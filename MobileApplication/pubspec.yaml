@@ -50,6 +50,8 @@ flutter:
   uses-material-design: true
 
   assets:
+    # The app reads runtime configuration via flutter_dotenv from a `.env` file.
+    # Use the repository-level `.env.example` as a template and do NOT commit `.env`.
     - .env
     - assets/
 

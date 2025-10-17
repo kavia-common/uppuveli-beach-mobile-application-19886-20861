@@ -208,10 +208,22 @@ For iOS: Ensure Xcode and CocoaPods are properly installed
 
 ## Environment Variables
 
-The following environment variables can be configured in `.env`:
+The app uses a `.env` file to configure runtime values. A template is available at the repository root.
 
-- `API_BASE_URL`: Backend API base URL (required)
-- `API_TIMEOUT`: API request timeout in seconds (default: 30)
+- Location of template: `../.env.example`
+- Recommended setup:
+  ```
+  cp ../.env.example ../.env
+  ```
+- Variables:
+  - `API_BASE_URL` (required): Backend API base URL
+  - `API_TIMEOUT` (required): API request timeout in milliseconds (e.g., 15000)
+  - `FIREBASE_API_KEY` (optional)
+  - `FIREBASE_APP_ID` (optional)
+  - `FIREBASE_MESSAGING_SENDER_ID` (optional)
+  - `FIREBASE_PROJECT_ID` (optional)
+
+Note: The `.env` file is included as an asset in `pubspec.yaml` so it can be loaded via flutter_dotenv.
 
 ## Support
 
