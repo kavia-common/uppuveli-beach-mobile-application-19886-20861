@@ -26,12 +26,18 @@ Health check:
 ## Authentication
 
 - Login path: /login
-- The app posts to `${REACT_APP_API_BASE_URL}/auth/login` with {email,password}
+- The app posts to `${REACT_APP_API_BASE_URL}/auth/login` with {email,password}` (JSON). If that endpoint is not available (404/405/etc.), the app will automatically retry `${REACT_APP_API_BASE_URL}/auth/token` using form-encoded OAuth2 password flow with fields `username` and `password`.
 - Expected response either:
-  - { token: "JWT..." } OR { status: "success", data: { token: "JWT..." } }
+  - { token: "JWT..." } OR { status: "success", data: { token: "JWT..." } } OR { access_token: "JWT...", token_type: "bearer" }
 - The token is stored in localStorage as "authToken".
-- API client attaches "Authorization: Bearer <token)" header.
+- API client attaches "Authorization: Bearer <token>" header.
 - On 401, client clears token and redirects to /login preserving the original path via next param.
+
+Troubleshooting login:
+- If you see "Network/CORS error", verify:
+  - REACT_APP_API_BASE_URL in WebAdminPanel/.env includes /api/v1 and points to the correct host/port.
+  - Backend CORS allows http://localhost:3000.
+  - Backend exposes either POST /auth/login (JSON) or POST /auth/token (form-encoded) and returns a token.
 
 ## Protected Routes
 
@@ -47,9 +53,9 @@ Public route:
 
 ## Files
 
-- src/api/client.js: Axios client with token handling and 401 redirect
+- src/api/client.js: Axios client with token handling, network/CORS error surfacing, and 401 redirect
 - src/api/endpoints.js: Endpoint path constants
-- src/pages/Login.jsx: Auth form
+- src/pages/Login.jsx: Auth form with endpoint fallback and better error details
 - src/pages/Bookings.jsx: CRUD bookings UI
 - src/pages/Loyalty.jsx: List + update loyalty accounts
 - src/pages/Boutique.jsx: CRUD boutique
@@ -61,6 +67,7 @@ Public route:
 ## Backend Endpoint Expectations
 
 - POST /auth/login -> returns token as described above
+- Alternative: POST /auth/token (OAuth2 password flow) returns {access_token, token_type}
 - Bookings: GET /bookings, POST /bookings, PUT /bookings/:id, DELETE /bookings/:id
 - Loyalty: GET /loyalty, PUT /loyalty/:id
 - Boutique: GET /boutique, POST /boutique, PUT /boutique/:id, DELETE /boutique/:id
